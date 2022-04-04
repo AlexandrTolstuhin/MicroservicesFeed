@@ -29,11 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Aggregato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Notifier", "src\Notifier\MicroservicesFeed.Notifier\MicroservicesFeed.Notifier.csproj", "{E231E08A-17C5-4D6B-B9B2-F0830115EDCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.News", "src\News\MicroservicesFeed.News\MicroservicesFeed.News.csproj", "{56FE1C9F-0657-4F29-BCC5-49D894459E26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.News", "src\Services\News\MicroservicesFeed.News\MicroservicesFeed.News.csproj", "{56FE1C9F-0657-4F29-BCC5-49D894459E26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Quotes", "src\Quotes\MicroservicesFeed.Quotes\MicroservicesFeed.Quotes.csproj", "{8391111D-08B5-4C5D-BB58-EC8DF2853639}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Quotes", "src\Services\Quotes\MicroservicesFeed.Quotes\MicroservicesFeed.Quotes.csproj", "{8391111D-08B5-4C5D-BB58-EC8DF2853639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Weather", "src\Weather\MicroservicesFeed.Weather\MicroservicesFeed.Weather.csproj", "{4282D40B-064A-499F-84D4-688B10CF8BBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Weather", "src\Services\Weather\MicroservicesFeed.Weather\MicroservicesFeed.Weather.csproj", "{4282D40B-064A-499F-84D4-688B10CF8BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
