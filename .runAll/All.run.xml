@@ -1,0 +1,11 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="All" type="CompoundRunConfigurationType">
+    <toRun name="MicroservicesFeed.Aggregator" type="LaunchSettings" />
+    <toRun name="MicroservicesFeed.Gateway" type="LaunchSettings" />
+    <toRun name="MicroservicesFeed.News" type="LaunchSettings" />
+    <toRun name="MicroservicesFeed.Notifier" type="LaunchSettings" />
+    <toRun name="MicroservicesFeed.Quotes" type="LaunchSettings" />
+    <toRun name="MicroservicesFeed.Weather" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>

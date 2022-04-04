@@ -5,9 +5,84 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{23CEF753-840A-4FDC-A12C-B72FE66D43DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aggregator", "Aggregator", "{9E7AB184-63E2-4FE1-8DBB-43F1A267E7AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E8FFFD8C-F12D-4F09-92E7-FC38D99171DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{631DB187-2803-4FC8-B386-5274B94B440D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifier", "Notifier", "{A4E8F0B6-57B0-48B4-92CA-31D98736439A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Shared", "src\Shared\MicroservicesFeed.Shared\MicroservicesFeed.Shared.csproj", "{20FA2F15-8A34-4790-986E-0AA8CE496B7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "News", "News", "{2DB7C351-2ABD-4494-B172-84449CC9A168}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Quotes", "Quotes", "{012210DA-9AF1-47E1-9F1F-7C92EEF52B2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Weather", "Weather", "{19B07078-5C27-480E-9771-F347E1520062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Gateway", "src\Gateway\MicroservicesFeed.Gateway\MicroservicesFeed.Gateway.csproj", "{586B8EAD-0FC1-47F7-97C7-F1F726DF166C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Aggregator", "src\Aggregator\MicroservicesFeed.Aggregator\MicroservicesFeed.Aggregator.csproj", "{05B803F2-7617-488C-AA2B-C4294B40D2CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Notifier", "src\Notifier\MicroservicesFeed.Notifier\MicroservicesFeed.Notifier.csproj", "{E231E08A-17C5-4D6B-B9B2-F0830115EDCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.News", "src\News\MicroservicesFeed.News\MicroservicesFeed.News.csproj", "{56FE1C9F-0657-4F29-BCC5-49D894459E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Quotes", "src\Quotes\MicroservicesFeed.Quotes\MicroservicesFeed.Quotes.csproj", "{8391111D-08B5-4C5D-BB58-EC8DF2853639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesFeed.Weather", "src\Weather\MicroservicesFeed.Weather\MicroservicesFeed.Weather.csproj", "{4282D40B-064A-499F-84D4-688B10CF8BBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20FA2F15-8A34-4790-986E-0AA8CE496B7D} = {23CEF753-840A-4FDC-A12C-B72FE66D43DB}
+		{2DB7C351-2ABD-4494-B172-84449CC9A168} = {E8FFFD8C-F12D-4F09-92E7-FC38D99171DC}
+		{012210DA-9AF1-47E1-9F1F-7C92EEF52B2F} = {E8FFFD8C-F12D-4F09-92E7-FC38D99171DC}
+		{19B07078-5C27-480E-9771-F347E1520062} = {E8FFFD8C-F12D-4F09-92E7-FC38D99171DC}
+		{586B8EAD-0FC1-47F7-97C7-F1F726DF166C} = {631DB187-2803-4FC8-B386-5274B94B440D}
+		{05B803F2-7617-488C-AA2B-C4294B40D2CD} = {9E7AB184-63E2-4FE1-8DBB-43F1A267E7AC}
+		{E231E08A-17C5-4D6B-B9B2-F0830115EDCD} = {A4E8F0B6-57B0-48B4-92CA-31D98736439A}
+		{56FE1C9F-0657-4F29-BCC5-49D894459E26} = {2DB7C351-2ABD-4494-B172-84449CC9A168}
+		{8391111D-08B5-4C5D-BB58-EC8DF2853639} = {012210DA-9AF1-47E1-9F1F-7C92EEF52B2F}
+		{4282D40B-064A-499F-84D4-688B10CF8BBB} = {19B07078-5C27-480E-9771-F347E1520062}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20FA2F15-8A34-4790-986E-0AA8CE496B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FA2F15-8A34-4790-986E-0AA8CE496B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FA2F15-8A34-4790-986E-0AA8CE496B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FA2F15-8A34-4790-986E-0AA8CE496B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586B8EAD-0FC1-47F7-97C7-F1F726DF166C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586B8EAD-0FC1-47F7-97C7-F1F726DF166C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586B8EAD-0FC1-47F7-97C7-F1F726DF166C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586B8EAD-0FC1-47F7-97C7-F1F726DF166C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B803F2-7617-488C-AA2B-C4294B40D2CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B803F2-7617-488C-AA2B-C4294B40D2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B803F2-7617-488C-AA2B-C4294B40D2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B803F2-7617-488C-AA2B-C4294B40D2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E231E08A-17C5-4D6B-B9B2-F0830115EDCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E231E08A-17C5-4D6B-B9B2-F0830115EDCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E231E08A-17C5-4D6B-B9B2-F0830115EDCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E231E08A-17C5-4D6B-B9B2-F0830115EDCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FE1C9F-0657-4F29-BCC5-49D894459E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FE1C9F-0657-4F29-BCC5-49D894459E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FE1C9F-0657-4F29-BCC5-49D894459E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FE1C9F-0657-4F29-BCC5-49D894459E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8391111D-08B5-4C5D-BB58-EC8DF2853639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8391111D-08B5-4C5D-BB58-EC8DF2853639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8391111D-08B5-4C5D-BB58-EC8DF2853639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8391111D-08B5-4C5D-BB58-EC8DF2853639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4282D40B-064A-499F-84D4-688B10CF8BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4282D40B-064A-499F-84D4-688B10CF8BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4282D40B-064A-499F-84D4-688B10CF8BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4282D40B-064A-499F-84D4-688B10CF8BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(RiderSharedRunConfigurations) = postSolution
+		File = .runAll\All.run.xml
 	EndGlobalSection
 EndGlobal
