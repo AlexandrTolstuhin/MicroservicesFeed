@@ -1,0 +1,51 @@
+name: MicroservicesFeed
+dashboardPort: 7001
+
+services:
+- name: microservices-feed-gateway
+  project: src/Gateway/MicroservicesFeed.Gateway/MicroservicesFeed.Gateway.csproj
+  bindings:
+    - port: 7000
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+
+- name: microservices-feed-aggregator
+  project: src/Aggregator/MicroservicesFeed.Aggregator/MicroservicesFeed.Aggregator.csproj
+  bindings:
+    - port: 7010
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+
+- name: microservices-feed-notifier
+  project: src/Notifier/MicroservicesFeed.Notifier/MicroservicesFeed.Notifier.csproj
+  bindings:
+    - port: 7020
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+
+- name: microservices-feed-news
+  project: src/Services/News/MicroservicesFeed.News/MicroservicesFeed.News.csproj
+  bindings:
+    - port: 7030
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+
+- name: microservices-feed-quotes
+  project: src/Services/Quotes/MicroservicesFeed.Quotes/MicroservicesFeed.Quotes.csproj
+  bindings:
+    - port: 7040
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+
+- name: microservices-feed-weather
+  project: src/Services/Weather/MicroservicesFeed.Weather/MicroservicesFeed.Weather.csproj
+  bindings:
+    - port: 7050
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
