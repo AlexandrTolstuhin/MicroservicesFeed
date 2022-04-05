@@ -6,6 +6,7 @@ services:
   project: src/Gateway/MicroservicesFeed.Gateway/MicroservicesFeed.Gateway.csproj
   bindings:
     - port: 7000
+      protocol: https
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
@@ -14,6 +15,7 @@ services:
   project: src/Aggregator/MicroservicesFeed.Aggregator/MicroservicesFeed.Aggregator.csproj
   bindings:
     - port: 7010
+      protocol: https
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
@@ -22,6 +24,7 @@ services:
   project: src/Notifier/MicroservicesFeed.Notifier/MicroservicesFeed.Notifier.csproj
   bindings:
     - port: 7020
+      protocol: https
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
@@ -30,6 +33,7 @@ services:
   project: src/Services/News/MicroservicesFeed.News/MicroservicesFeed.News.csproj
   bindings:
     - port: 7030
+      protocol: https
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
@@ -38,6 +42,7 @@ services:
   project: src/Services/Quotes/MicroservicesFeed.Quotes/MicroservicesFeed.Quotes.csproj
   bindings:
     - port: 7040
+      protocol: https
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
@@ -46,6 +51,7 @@ services:
   project: src/Services/Weather/MicroservicesFeed.Weather/MicroservicesFeed.Weather.csproj
   bindings:
     - port: 7050
+      protocol: https
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
