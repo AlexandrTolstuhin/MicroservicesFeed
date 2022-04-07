@@ -4,10 +4,15 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>ed3a0f65-e069-4dbe-9f29-6c31cbf78311</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Shared\MicroservicesFeed.Shared\MicroservicesFeed.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Reactive.Linq" Version="5.0.0" />
     </ItemGroup>
 
 </Project>
