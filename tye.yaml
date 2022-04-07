@@ -55,3 +55,12 @@ services:
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
+
+- name: redis
+  image: redis
+  bindings:
+    - port: 6379
+      connectionString: ${host}:${port}
+  volumes:
+    - source: redis
+      target: /data
