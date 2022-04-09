@@ -22,6 +22,8 @@ internal class RandomPricingService : IPricingService
         _logger = logger;
     }
 
+    public IEnumerable<string> GetSymbols() => _symbolPrices.Keys;
+
     public async IAsyncEnumerable<CurrencyPair> GetPrices(
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {

@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MicroservicesFeed.Clients.Console";
+
+package Quotes.Pricing;
+
+service PricingFeed {
+  rpc GetSymbols(SymbolsRequest) returns (SymbolsResponse);
+}
+
+message SymbolsRequest {
+}
+
+message SymbolsResponse {
+  repeated string symbols = 1;
+}
