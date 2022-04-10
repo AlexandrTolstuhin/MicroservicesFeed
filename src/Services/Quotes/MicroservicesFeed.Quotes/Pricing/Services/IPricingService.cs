@@ -2,5 +2,9 @@
 
 internal interface IPricingService
 {
+    IEnumerable<string> GetSymbols();
+
     IAsyncEnumerable<CurrencyPair> GetPrices(CancellationToken cancellationToken = default);
+
+    event EventHandler<CurrencyPair> PriceChanged;
 }

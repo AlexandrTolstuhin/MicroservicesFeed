@@ -341,3 +341,6 @@ healthchecksdb
 
 #Tye
 .tye/
+
+#Redis volumes
+.redis/

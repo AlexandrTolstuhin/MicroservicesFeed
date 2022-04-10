@@ -62,5 +62,8 @@ services:
     - port: 6379
       connectionString: ${host}:${port}
   volumes:
-    - source: redis
+    - source: .redis
       target: /data
+      name: redis-volume
+  tags:
+    - redis

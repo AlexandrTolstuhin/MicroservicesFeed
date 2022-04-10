@@ -22,6 +22,8 @@ internal class RandomPricingService : IPricingService
         _logger = logger;
     }
 
+    public IEnumerable<string> GetSymbols() => _symbolPrices.Keys;
+
     public async IAsyncEnumerable<CurrencyPair> GetPrices(
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
@@ -40,12 +42,16 @@ internal class RandomPricingService : IPricingService
                     newPrice,
                     tick);
 
-                yield return new CurrencyPair(symbol, newPrice, _dateProvider.UtcNow.ToUnixTimeMilliseconds());
+                var currencyPair = new CurrencyPair(symbol, newPrice, _dateProvider.UtcNow.ToUnixTimeMilliseconds());
+                PriceChanged?.Invoke(this, currencyPair);
+                yield return currencyPair;
             }
 
             await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
         }
     }
+
+    public event EventHandler<CurrencyPair>? PriceChanged;
 
     private decimal NextTick()
     {

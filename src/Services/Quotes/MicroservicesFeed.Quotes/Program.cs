@@ -14,9 +14,12 @@ builder.Services
     .AddDateProvider()
     .AddSerialization()
     .AddRedis(builder.Configuration)
-    .AddRedisStreaming();
+    .AddRedisStreaming()
+    .AddGrpc();
 
 var app = builder.Build();
+
+app.MapGrpcService<PricingGrpcService>();
 
 app.MapGet("/", () => "Microservices Feed Quotes");
 app.MapPost("/pricing/start", async (PricingRequestChannel channel) =>
