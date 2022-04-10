@@ -42,12 +42,16 @@ internal class RandomPricingService : IPricingService
                     newPrice,
                     tick);
 
-                yield return new CurrencyPair(symbol, newPrice, _dateProvider.UtcNow.ToUnixTimeMilliseconds());
+                var currencyPair = new CurrencyPair(symbol, newPrice, _dateProvider.UtcNow.ToUnixTimeMilliseconds());
+                PriceChanged?.Invoke(this, currencyPair);
+                yield return currencyPair;
             }
 
             await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
         }
     }
+
+    public event EventHandler<CurrencyPair>? PriceChanged;
 
     private decimal NextTick()
     {

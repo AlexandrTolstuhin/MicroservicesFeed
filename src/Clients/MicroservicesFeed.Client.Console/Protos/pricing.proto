@@ -6,6 +6,7 @@ package Quotes.Pricing;
 
 service PricingFeed {
   rpc GetSymbols(SymbolsRequest) returns (SymbolsResponse);
+  rpc SubscribePricing(PricingRequest) returns (stream PricingResponse);
 }
 
 message SymbolsRequest {
@@ -13,4 +14,14 @@ message SymbolsRequest {
 
 message SymbolsResponse {
   repeated string symbols = 1;
+}
+
+message PricingRequest {
+  string symbol = 1;
+}
+
+message PricingResponse {
+  string symbol = 1;
+  int32 value = 2;
+  int64 timestamp = 3;
 }
