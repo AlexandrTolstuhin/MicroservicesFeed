@@ -2,6 +2,31 @@ name: MicroservicesFeed
 dashboardPort: 7001
 
 services:
+- name: redis
+  image: redis
+  bindings:
+    - port: 6379
+      connectionString: ${host}:${port}
+  volumes:
+    - source: .redis
+      target: /data
+      name: redis-volume
+  tags:
+    - infrastructure
+
+- name: pulsar
+  image: apachepulsar/pulsar
+  bindings:
+    - port: 6650
+      protocol: pulsar
+  args: "bin/pulsar standalone"
+  volumes:
+    - source: .pulsar
+      target: /pulsar/data
+      name: pulsar-volume
+  tags:
+    - infrastructure
+
 - name: microservices-feed-gateway
   project: src/Gateway/MicroservicesFeed.Gateway/MicroservicesFeed.Gateway.csproj
   bindings:
@@ -55,15 +80,3 @@ services:
   env:
     - name: ASPNETCORE_ENVIRONMENT
       value: Development
-
-- name: redis
-  image: redis
-  bindings:
-    - port: 6379
-      connectionString: ${host}:${port}
-  volumes:
-    - source: .redis
-      target: /data
-      name: redis-volume
-  tags:
-    - redis

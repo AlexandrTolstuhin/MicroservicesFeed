@@ -344,3 +344,6 @@ healthchecksdb
 
 #Redis volumes
 .redis/
+
+#Pulsar volumes
+.pulsar/
