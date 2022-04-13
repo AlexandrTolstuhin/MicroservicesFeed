@@ -15,7 +15,7 @@ internal sealed class PricingStreamBackgroundService : BackgroundService
         _subscriber = subscriber;
         _logger = logger;
     }
-    
+
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         await _subscriber.SubscribeAsync<CurrencyPair>("pricing", currencyPair =>

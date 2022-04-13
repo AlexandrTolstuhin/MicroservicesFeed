@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddHostedService<PricingStreamBackgroundService>()
+    .AddHostedService<WeatherStreamBackgroundService>()
     .AddSerialization()
     .AddRedis(builder.Configuration)
     .AddRedisStreaming();
