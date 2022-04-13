@@ -6,13 +6,16 @@ namespace MicroservicesFeed.Aggregator.Services;
 internal sealed class PricingStreamBackgroundService : BackgroundService
 {
     private readonly IStreamSubscriber _subscriber;
+    private readonly IPricingHandler _pricingHandler;
     private readonly ILogger<PricingStreamBackgroundService> _logger;
 
     public PricingStreamBackgroundService(
         IStreamSubscriber subscriber,
+        IPricingHandler pricingHandler,
         ILogger<PricingStreamBackgroundService> logger)
     {
         _subscriber = subscriber;
+        _pricingHandler = pricingHandler;
         _logger = logger;
     }
 
@@ -25,6 +28,8 @@ internal sealed class PricingStreamBackgroundService : BackgroundService
                 currencyPair.Symbol,
                 currencyPair.Value,
                 currencyPair.Timestamp);
+
+            _ = _pricingHandler.HandleAsync(currencyPair, stoppingToken);
         }, stoppingToken);
     }
 }

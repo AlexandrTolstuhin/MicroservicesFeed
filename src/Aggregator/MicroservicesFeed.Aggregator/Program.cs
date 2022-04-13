@@ -1,4 +1,6 @@
 using MicroservicesFeed.Aggregator.Services;
+using MicroservicesFeed.Shared.Pulsar;
+using MicroservicesFeed.Shared.Pulsar.Messaging;
 using MicroservicesFeed.Shared.Redis;
 using MicroservicesFeed.Shared.Redis.Streaming;
 using MicroservicesFeed.Shared.Serialization;
@@ -10,7 +12,10 @@ builder.Services
     .AddHostedService<WeatherStreamBackgroundService>()
     .AddSerialization()
     .AddRedis(builder.Configuration)
-    .AddRedisStreaming();
+    .AddRedisStreaming()
+    .AddPulsar(builder.Configuration)
+    .AddPulsarMessaging()
+    .AddSingleton<IPricingHandler, PricingHandler>();
 
 var app = builder.Build();
 

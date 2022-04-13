@@ -18,6 +18,7 @@ services:
   image: apachepulsar/pulsar
   bindings:
     - port: 6650
+      protocol: pulsar
   args: "bin/pulsar standalone"
   volumes:
     - source: .pulsar
