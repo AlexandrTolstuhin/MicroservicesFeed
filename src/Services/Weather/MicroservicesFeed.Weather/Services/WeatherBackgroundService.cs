@@ -17,7 +17,7 @@ public class WeatherBackgroundService : BackgroundService
         _streamPublisher = streamPublisher;
         _logger = logger;
     }
-    
+
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         using var scope = _serviceProvider.CreateScope();

@@ -12,7 +12,7 @@ public class WeatherStreamBackgroundService : BackgroundService
         _subscriber = subscriber;
         _logger = logger;
     }
-    
+
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         await _subscriber.SubscribeAsync<WeatherData>("weather", data =>

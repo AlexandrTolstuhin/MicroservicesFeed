@@ -17,7 +17,7 @@ internal class PricingGrpcService : PricingFeed.PricingFeedBase
     public override Task<SymbolsResponse> GetSymbols(SymbolsRequest request, ServerCallContext context)
         => Task.FromResult(new SymbolsResponse
         {
-            Symbols = {_pricingService.GetSymbols()}
+            Symbols = { _pricingService.GetSymbols() }
         });
 
     public override async Task SubscribePricing(
@@ -47,7 +47,7 @@ internal class PricingGrpcService : PricingFeed.PricingFeedBase
                 await responseStream.WriteAsync(new PricingResponse
                 {
                     Symbol = symbol,
-                    Value = (int) (100 * value),
+                    Value = (int)(100 * value),
                     Timestamp = timestamp
                 });
             }

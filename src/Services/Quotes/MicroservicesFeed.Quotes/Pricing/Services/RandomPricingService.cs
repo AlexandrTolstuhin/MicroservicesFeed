@@ -57,6 +57,6 @@ internal class RandomPricingService : IPricingService
     {
         var sign = _random.Next(0, 2) == 0 ? -1 : 1;
         var tick = _random.NextDouble() / 10;
-        return (decimal) (sign * tick);
+        return (decimal)(sign * tick);
     }
 }

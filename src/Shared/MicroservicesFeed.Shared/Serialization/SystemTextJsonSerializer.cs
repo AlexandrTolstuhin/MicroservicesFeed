@@ -9,9 +9,9 @@ internal class SystemTextJsonSerializer : ISerializer
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         PropertyNameCaseInsensitive = true,
-        Converters = {new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)}
+        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
     };
-    
+
     public string Serialize<T>(T value) where T : class => JsonSerializer.Serialize(value, Options);
 
     public T? Deserialize<T>(string value) where T : class => JsonSerializer.Deserialize<T>(value, Options);

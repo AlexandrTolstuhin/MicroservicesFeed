@@ -10,7 +10,7 @@ public static class HttpClientServiceCollectionCollectionExtensions
 {
     public static IServiceCollection AddHttpApiClient<TInterface, TClient>(
         this IServiceCollection services,
-        IConfiguration configuration) 
+        IConfiguration configuration)
         where TInterface : class where TClient : class, TInterface
     {
         var section = configuration.GetRequiredSection("HttpApiClient");
